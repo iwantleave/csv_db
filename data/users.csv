@@ -1,0 +1,9 @@
+﻿id,name,age,city,active
+1,Alice,34,Beijing,true
+2,Bob,28,Shanghai,true
+3,Carol,45,Beijing,false
+4,Dave,31,Shenzhen,true
+5,Eve,29,Shanghai,false
+6,Frank,52,Beijing,true
+7,Grace,38,Shenzhen,true
+8,Henry,26,Shanghai,false

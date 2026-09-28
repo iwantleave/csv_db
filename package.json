@@ -1,0 +1,13 @@
+{
+  "name": "csv-sql-demo",
+  "version": "1.0.0",
+  "description": "CSV 文件为底层存储、支持标准 SELECT 与 DESC 的 SQL demo，存储层可替换",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "alasql": "^4.0.0"
+  }
+}

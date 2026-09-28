@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV SQL Demo</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>CSV SQL Demo</h1>
+    <span class="sub">底层存储：CSV（可换）· 查询引擎：alasql · 支持 SELECT / DESC</span>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">数据表（点击查看结构）</div>
+      <ul id="tableList"></ul>
+    </aside>
+    <main class="main">
+      <div class="editor">
+        <textarea id="sqlInput" spellcheck="false"
+          placeholder="输入 SQL，例如：&#10;SELECT * FROM users WHERE age > 30&#10;SELECT city, COUNT(*) AS n FROM users GROUP BY city"></textarea>
+        <div class="actions">
+          <button id="runBtn">执行 (Ctrl+Enter)</button>
+          <button id="clearBtn" class="ghost">清空</button>
+          <span id="status" class="status"></span>
+        </div>
+      </div>
+      <div id="error" class="error" hidden></div>
+      <div class="result">
+        <div id="resultMeta" class="result-meta"></div>
+        <div class="table-wrap">
+          <table id="resultTable"></table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
