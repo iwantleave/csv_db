@@ -11,14 +11,22 @@
 
 ## 快速开始
 
+**环境要求**：Node.js 18+（推荐 Node 22 LTS）与 npm。
+
 ```bash
-npm install            # 唯一运行时依赖：alasql
-node server.js         # 启动服务
+npm install            # 安装唯一运行时依赖：alasql
+node server.js         # 启动服务（默认监听 3000 端口）
 # 浏览器打开 http://localhost:3000
 ```
 
+启动成功后终端会打印 `CSV-SQL demo 运行中 -> http://localhost:3000`。打开页面后即可使用：
+
 - 左侧列出 `data/` 下所有表，点击表名即执行 `DESC <表名>`。
 - 右侧输入 SQL，按 `Ctrl+Enter` 或点"执行"，结果以表格展示；错误以红框提示。
+
+不想开页面也能验证：`GET /api/tables` 返回表清单，`POST /api/query {"sql":"SELECT * FROM users"}` 返回查询结果（见 [API 说明](#api-说明)）。
+
+> **改端口**：通过环境变量 `PORT` 覆盖，例如 `PORT=8080 node server.js`（代码里是 `process.env.PORT || 3000`，无需改源码）。
 
 ---
 
